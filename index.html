@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mistercorbett — Apps for the Classroom</title>
-<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Educational apps for students and teachers, built by a classroom teacher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -119,7 +118,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 #timer-display{font-family:'DM Serif Display',serif;font-size:4rem;letter-spacing:4px;color:var(--neon-white);text-shadow:0 0 20px rgba(255,255,255,.2);min-height:68px;line-height:1;text-align:center}
 #timer-display.urgent{color:#ff3232;text-shadow:0 0 24px rgba(255,50,50,.6)}
 .reels{display:flex;gap:14px;width:100%;max-width:760px}
-.reel{flex:1;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.025);padding:16px 10px;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:border-color .3s,box-shadow .3s;overflow:hidden}
+.reel{flex:1;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.025);padding:16px 10px;padding-top:20px;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;transition:border-color .3s,box-shadow .3s;overflow:hidden}
 .reel.lit{border-color:var(--reel-c);box-shadow:0 0 24px color-mix(in srgb,var(--reel-c) 35%,transparent)}
 .reel-label{font-size:.5rem;letter-spacing:3px;text-transform:uppercase;color:var(--reel-c);font-weight:500;font-family:'DM Mono',monospace}
 .reel-value{font-size:clamp(.85rem,2vw,1.1rem);font-weight:500;color:#fff;text-align:center;line-height:1.4;font-family:'DM Mono',monospace}
@@ -141,20 +140,24 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 .slot-section:fullscreen #spin-btn,
 .slot-section:-webkit-full-screen #spin-btn{font-size:2.6rem;padding:22px 110px}
 .slot-section:fullscreen .reel,
-.slot-section:-webkit-full-screen .reel{min-height:160px}
+.slot-section:-webkit-full-screen .reel{min-height:200px;padding:24px 16px}
 .slot-section:fullscreen .reel-value,
-.slot-section:-webkit-full-screen .reel-value{font-size:clamp(1rem,2.5vw,1.4rem)}
+.slot-section:-webkit-full-screen .reel-value{font-size:clamp(1.4rem,3vw,2rem);white-space:normal;word-wrap:break-word}
+.slot-section:fullscreen .reel-label,
+.slot-section:-webkit-full-screen .reel-label{font-size:.8rem;letter-spacing:3px}
 .slot-section:fullscreen #timer-display,
 .slot-section:-webkit-full-screen #timer-display{font-size:5.5rem}
+.slot-section:fullscreen #combo-label,
+.slot-section:-webkit-full-screen #combo-label{font-size:1rem}
 .slot-section:fullscreen .reels,
 .slot-section:-webkit-full-screen .reels{max-width:1000px}
 
 /* DOWNLOAD BANNER — only in fullscreen */
-.download-banner{display:none;position:absolute;bottom:28px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.65);border:1px solid rgba(0,229,255,.2);border-radius:8px;padding:12px 24px;align-items:center;gap:16px;white-space:nowrap}
+.download-banner{display:none;position:absolute;top:24px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.75);border:1px solid rgba(0,229,255,.25);border-radius:8px;padding:20px 40px;align-items:center;gap:28px;white-space:nowrap}
 .slot-section:fullscreen .download-banner,
 .slot-section:-webkit-full-screen .download-banner{display:flex}
-.download-banner-text{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-muted);font-family:'DM Mono',monospace}
-.download-banner-link{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-cyan);text-decoration:none;border:1px solid rgba(0,229,255,.4);padding:6px 14px;border-radius:3px;transition:background .2s;font-family:'DM Mono',monospace}
+.download-banner-text{font-size:1.4rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-muted);font-family:'DM Mono',monospace}
+.download-banner-link{font-size:1.4rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-cyan);text-decoration:none;border:1px solid rgba(0,229,255,.4);padding:8px 18px;border-radius:3px;transition:background .2s;font-family:'DM Mono',monospace}
 .download-banner-link:hover{background:rgba(0,229,255,.1)}
 
 /* WHAP INFO */
