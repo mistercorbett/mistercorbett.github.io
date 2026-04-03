@@ -121,7 +121,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 .reel{flex:1;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.025);padding:16px 10px;padding-top:20px;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;transition:border-color .3s,box-shadow .3s;overflow:hidden}
 .reel.lit{border-color:var(--reel-c);box-shadow:0 0 24px color-mix(in srgb,var(--reel-c) 35%,transparent)}
 .reel-label{font-size:.5rem;letter-spacing:3px;text-transform:uppercase;color:var(--reel-c);font-weight:500;font-family:'DM Mono',monospace}
-.reel-value{font-size:clamp(.85rem,2vw,1.1rem);font-weight:500;color:#fff;text-align:center;line-height:1.4;font-family:'DM Mono',monospace}
+.reel-value{font-size:clamp(.85rem,2vw,1.1rem);font-weight:500;color:#fff;text-align:center;line-height:1.4;font-family:'DM Mono',monospace;white-space:normal;word-wrap:break-word}
 .reel-value.spinning{animation:spin-blur .12s linear infinite}
 @keyframes spin-blur{0%{transform:translateY(8px);opacity:.2}50%{transform:translateY(-8px);opacity:.5}100%{transform:translateY(8px);opacity:.2}}
 #combo-label{font-size:.68rem;letter-spacing:2px;color:var(--neon-muted);text-transform:uppercase;text-align:center;min-height:1.4em;font-family:'DM Mono',monospace}
@@ -317,11 +317,11 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
         <span class="filter-group-label">Regions</span>
         <div class="filter-chips">
           <span class="filter-chip on" data-group="region" data-val="East Asia">East Asia</span>
-          <span class="filter-chip on" data-group="region" data-val="SE Asia &amp; Oceania">SE Asia &amp; Oceania</span>
+          <span class="filter-chip on" data-group="region" data-val="Southeast Asia &amp; Oceania">Southeast Asia &amp; Oceania</span>
           <span class="filter-chip on" data-group="region" data-val="South Asia">South Asia</span>
           <span class="filter-chip on" data-group="region" data-val="Central Asia">Central Asia</span>
           <span class="filter-chip on" data-group="region" data-val="Europe">Europe</span>
-          <span class="filter-chip on" data-group="region" data-val="Middle East &amp; N. Africa">Middle East &amp; N. Africa</span>
+          <span class="filter-chip on" data-group="region" data-val="Middle East &amp; North Africa">Middle East &amp; N. Africa</span>
           <span class="filter-chip on" data-group="region" data-val="Sub-Saharan Africa">Sub-Saharan Africa</span>
           <span class="filter-chip on" data-group="region" data-val="North America">North America</span>
           <span class="filter-chip on" data-group="region" data-val="Latin America">Latin America</span>
