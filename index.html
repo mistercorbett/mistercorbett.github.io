@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mistercorbett — Apps for the Classroom</title>
 <link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Educational apps and classroom resources built by a classroom teacher.">
+<meta name="description" content="Educational apps, garden tools, and classroom resources built by a California teacher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -19,6 +19,8 @@
   --deep-black:#060608; --deep-dark:#0c0c12;
   --neon-muted:rgba(240,250,255,0.42); --neon-white:#f0faff;
   --neon-border:rgba(255,255,255,0.08);
+  --tomato-red:#d94f3a; --tomato-green:#3a7d44; --tomato-leaf:#5a9e5e;
+  --tomato-gold:#c97d2a; --tomato-cream:#fdf6ec; --tomato-dark:#1a0f0a;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -76,6 +78,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 .app-card:hover .card-cta{gap:12px}
 .whap-app{--card-accent:#2f6bc8}
 .whap-classroom{--card-accent:#c84b2f}
+.tomato-app{--card-accent:var(--tomato-red)}
 
 /* ── CONTACT / FOOTER ── */
 .contact-section{padding:48px;text-align:center}
@@ -216,16 +219,85 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
   .privacy-page{padding:110px 24px 60px}
   .contact-section{padding:40px 24px}
 }
-.slot-wrapper-box{
-  border:1px solid rgba(0,229,255,0.2);
-  border-radius:12px;
-  padding:40px 24px 48px;
-  width:100%;
-  max-width:800px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:26px;
+/* ── TOMATO JOURNAL PAGE ── */
+#page-tomato{background:var(--tomato-cream);color:var(--tomato-dark);min-height:100vh}
+.tomato-hero{padding:130px 48px 64px;position:relative;overflow:hidden;background:var(--tomato-dark);display:flex;flex-direction:column;align-items:center}
+.tomato-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 20% 50%,rgba(217,79,58,0.18),transparent),radial-gradient(ellipse 50% 70% at 80% 30%,rgba(58,125,68,0.12),transparent);pointer-events:none}
+.tomato-back{display:inline-flex;align-items:center;gap:8px;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:rgba(253,246,236,0.5);cursor:pointer;border:1px solid rgba(253,246,236,0.12);border-radius:3px;padding:8px 16px;background:transparent;transition:color .2s,border-color .2s;margin-bottom:40px;font-family:'DM Mono',monospace}
+.tomato-back:hover{color:var(--tomato-cream);border-color:rgba(253,246,236,0.35)}
+.tomato-eyebrow{font-size:.58rem;letter-spacing:5px;text-transform:uppercase;color:var(--tomato-leaf);margin-bottom:12px;display:block;font-family:'DM Mono',monospace}
+.tomato-title{font-family:'DM Serif Display',serif;font-size:clamp(3rem,9vw,6.5rem);line-height:.9;letter-spacing:-1px;color:var(--tomato-cream);margin-bottom:16px;display:block}
+.tomato-title em{font-style:italic;color:var(--tomato-red);text-shadow:0 2px 24px rgba(217,79,58,0.4)}
+.tomato-tagline{font-size:.8rem;letter-spacing:1px;color:rgba(253,246,236,0.6);line-height:1.9;max-width:480px;margin-bottom:36px;font-family:'DM Mono',monospace}
+.tomato-hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-tomato{background:var(--tomato-red);color:#fff;box-shadow:0 4px 24px rgba(217,79,58,0.35)}
+.btn-tomato:hover{background:#c4402b;box-shadow:0 4px 36px rgba(217,79,58,0.5)}
+.btn-tomato-ghost{background:transparent;color:rgba(253,246,236,0.65);border:1px solid rgba(253,246,236,0.2)}
+.btn-tomato-ghost:hover{color:var(--tomato-cream);border-color:rgba(253,246,236,0.5)}
+
+/* Hero badge */
+.tomato-badge{display:inline-flex;align-items:center;gap:8px;font-size:.56rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(253,246,236,0.45);border:1px solid rgba(253,246,236,0.1);border-radius:2px;padding:5px 12px;margin-bottom:20px;font-family:'DM Mono',monospace}
+.tomato-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--tomato-leaf)}
+
+/* Features section */
+.tomato-features{background:var(--tomato-cream);padding:80px 48px}
+.tomato-features-inner{max-width:1040px;margin:0 auto}
+.tomato-section-label{font-size:.56rem;letter-spacing:4px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:12px;font-family:'DM Mono',monospace}
+.tomato-section-heading{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--tomato-dark);margin-bottom:40px;letter-spacing:-0.5px;line-height:1.1}
+.tomato-features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.tomato-feature-card{background:#fff;border:1px solid rgba(26,15,10,0.08);border-radius:4px;padding:28px 24px;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.tomato-feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--card-f-accent,var(--tomato-red));transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.tomato-feature-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(26,15,10,.07);border-color:var(--card-f-accent,var(--tomato-red))}
+.tomato-feature-card:hover::before{transform:scaleX(1)}
+.tomato-feature-icon{font-size:1.5rem;margin-bottom:14px;display:block}
+.tomato-feature-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-dark);margin-bottom:8px}
+.tomato-feature-desc{font-size:.72rem;line-height:1.95;color:var(--ink-soft);font-family:'DM Mono',monospace}
+
+/* Value prop band */
+.tomato-value-band{background:var(--tomato-dark);padding:72px 48px;text-align:center}
+.tomato-value-band-inner{max-width:960px;margin:0 auto}
+.tomato-value-quote{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,4vw,2.6rem);color:var(--tomato-cream);line-height:1.25;margin-bottom:16px;letter-spacing:-0.3px;white-space:nowrap}
+.tomato-value-quote em{font-style:italic;color:var(--tomato-red)}
+.tomato-value-sub{font-size:.74rem;letter-spacing:.5px;color:rgba(253,246,236,0.5);line-height:1.9;font-family:'DM Mono',monospace}
+
+/* Tabs section */
+.tomato-tabs-section{background:#fff;padding:80px 48px}
+.tomato-tabs-inner{max-width:900px;margin:0 auto}
+.tomato-tab-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,15,10,0.08);border-radius:4px;overflow:hidden;margin-bottom:36px}
+.tomato-tab{padding:14px 12px;text-align:center;cursor:pointer;background:var(--paper-2);font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink-muted);transition:background .15s,color .15s;font-family:'DM Mono',monospace;user-select:none}
+.tomato-tab.active{background:#fff;color:var(--tomato-red)}
+.tomato-tab-panels .panel{display:none}
+.tomato-tab-panels .panel.active{display:block}
+.tab-panel-heading{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--tomato-dark);margin-bottom:10px}
+.tab-panel-desc{font-size:.76rem;line-height:2;color:var(--ink-soft);margin-bottom:20px;font-family:'DM Mono',monospace;max-width:640px}
+.tab-bullet-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.tab-bullet-list li{display:flex;gap:10px;align-items:flex-start;font-size:.72rem;line-height:1.8;color:var(--ink-soft);font-family:'DM Mono',monospace}
+.tab-bullet-list li::before{content:'▸';color:var(--tomato-red);flex-shrink:0;margin-top:2px}
+
+/* CTA footer band */
+.tomato-cta-band{background:var(--tomato-red);padding:64px 48px;text-align:center}
+.tomato-cta-band-inner{max-width:560px;margin:0 auto}
+.tomato-cta-heading{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
+.tomato-cta-sub{font-size:.74rem;color:rgba(255,255,255,0.72);line-height:1.9;margin-bottom:28px;font-family:'DM Mono',monospace}
+.btn-white{background:#fff;color:var(--tomato-red)}
+.btn-white:hover{background:var(--tomato-cream)}
+
+/* Tomato footer */
+.tomato-footer{background:var(--tomato-dark);padding:40px 48px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.tomato-footer-logo{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(253,246,236,0.35);cursor:pointer}
+.tomato-footer-copy{font-size:.58rem;color:rgba(253,246,236,0.28);line-height:1.8;font-family:'DM Mono',monospace}
+
+/* card accent for apps grid */
+.tomato-app{--card-accent:var(--tomato-red)}
+
+@media(max-width:700px){
+  .tomato-hero{padding:100px 24px 48px}
+  .tomato-features{padding:56px 24px}
+  .tomato-value-band{padding:56px 24px}
+  .tomato-tabs-section{padding:56px 24px}
+  .tomato-cta-band{padding:48px 24px}
+  .tomato-footer{padding:32px 24px}
+  .tomato-tab-list{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -237,7 +309,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a onclick="showPage('apps')">Apps</a></li>
     <li><a onclick="showPage('classroom')">Classroom</a></li>
-    <li><a onclick="showPage('privacy')">Privacy</a></li>
+    <li><a onclick="showPage('privacy')">Privacy Policies</a></li>
     <li><a href="https://apps.apple.com/app/id6760600962" target="_blank" class="nav-cta">&#xF8FF; App Store</a></li>
   </ul>
 </nav>
@@ -253,7 +325,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <p class="hero-label">Classroom Apps</p>
       <h1 class="hero-name">mister<em>corbett</em></h1>
       <div class="hero-divider" style="margin:0 auto 24px"></div>
-      <p class="hero-tagline">Educational apps and resources built by a long-time California-based social studies teacher with a focus on AP World History.</p>
+      <p class="hero-tagline">Apps, classroom resources, and more - built by a California social studies teacher.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
         <button class="btn btn-dark" onclick="showPage('apps')">Apps &#8594;</button>
         <button class="btn btn-ghost" style="color:var(--ink-muted);border-color:var(--border)" onclick="showPage('classroom')">Classroom Resources &#8594;</button>
@@ -315,6 +387,20 @@ Free to play. SAQ MODE from $2.99/month.</p>
           <a href="https://apps.apple.com/app/id6760600962" target="_blank" class="card-cta" style="color:var(--accent-2)">&#xF8FF; Download on App Store &#8594;</a>
           <span class="card-cta" onclick="showPage('classroom')" style="color:var(--ink-muted);cursor:pointer">Web Version &#8594;</span>
         </div>
+      </div>
+      <div class="app-card tomato-app" onclick="showPage('tomato')">
+        <p class="card-platform"><span class="card-dot"></span>iOS App &mdash; iPhone &amp; iPad &mdash; Coming Soon</p>
+        <div class="card-name">Tomato Journal</div>
+        <div class="card-subject">Home Gardening</div>
+        <p class="card-desc">Track your tomato plants, harvests, and results season over season. Log journal entries, build a variety encyclopedia from your own data, and compare seasons year over year. Free for your first full year. Then $3.99/year — no ads, ever.</p>
+        <div class="card-tags">
+          <span class="card-tag">Plant Tracking</span>
+          <span class="card-tag">Harvest Log</span>
+          <span class="card-tag">Variety Encyclopedia</span>
+          <span class="card-tag">iCloud Sync</span>
+          <span class="card-tag">CSV Export</span>
+        </div>
+        <span class="card-cta">Learn More &#8594;</span>
       </div>
     </div>
   </section>
@@ -520,12 +606,37 @@ Free to play. SAQ MODE from $2.99/month.</p>
 
 
 <!-- ══════════════════════════════════════
-     PRIVACY
+     PRIVACY HUB
 ══════════════════════════════════════ -->
 <div id="page-privacy" class="page">
   <div class="privacy-page">
     <button class="btn btn-ghost" onclick="showPage('home')" style="margin-bottom:40px">&#8592; Back</button>
+    <h1 class="privacy-heading">Privacy Policies</h1>
+    <span class="privacy-date" style="margin-bottom:32px;display:block">Select an app to view its privacy policy.</span>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+      <div onclick="showPage('privacy-whap')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s;position:relative;overflow:hidden" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent-2)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent-2);margin-bottom:6px">iOS App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">AP World History Slots</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: April 2026 &nbsp;&#8594;</div>
+      </div>
+      <div onclick="showPage('privacy-tomato')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: May 2026 &nbsp;&#8594;</div>
+      </div>
+    </div>
+  </div>
+</div><!-- /privacy hub -->
+
+
+<!-- ══════════════════════════════════════
+     PRIVACY — WORLD HISTORY SLOTS
+══════════════════════════════════════ -->
+<div id="page-privacy-whap" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Privacy Policies</button>
     <h1 class="privacy-heading">Privacy Policy</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--accent-2);margin-bottom:6px">AP World History Slots</div>
     <span class="privacy-date">Last updated: April 2026</span>
     <div class="privacy-content">
       <p>World History Slots (&#8220;the App&#8221;) is designed to help students prepare for the AP World History exam. This privacy policy explains how the App handles information.</p>
@@ -541,12 +652,180 @@ Free to play. SAQ MODE from $2.99/month.</p>
       <p>If you have any questions please contact us at: mistercorbett@gmail.com</p>
     </div>
   </div>
-</div><!-- /privacy -->
+</div><!-- /privacy-whap -->
+
+
+<!-- ══════════════════════════════════════
+     PRIVACY — TOMATO JOURNAL
+══════════════════════════════════════ -->
+<div id="page-privacy-tomato" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Privacy Policies</button>
+    <h1 class="privacy-heading">Privacy Policy</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal</div>
+    <span class="privacy-date">Last updated: May 2026</span>
+    <div class="privacy-content">
+      <p>Tomato Journal (&#8220;the App&#8221;) is a personal garden tracking app for tomato growers. This privacy policy explains how the App handles your information.</p>
+      <h2>Information We Collect</h2>
+      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, and photos &#8212; in your personal iCloud account via Apple&#8217;s CloudKit. This data is yours, stored under your Apple ID, and is never accessed by us.</p>
+      <h2>Subscription</h2>
+      <p>Tomato Journal uses Apple&#8217;s StoreKit for subscription management. We do not collect or store any payment information. All billing is handled entirely by Apple.</p>
+      <h2>What We Don&#8217;t Do</h2>
+      <p>We do not collect personal information. We do not serve ads. We do not share your data with third parties.</p>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Any changes will be reflected with an updated date at the top of this page.</p>
+      <h2>Contact</h2>
+      <p>If you have any questions please contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /privacy-tomato -->
+
+
+<!-- ══════════════════════════════════════
+     TOMATO JOURNAL
+══════════════════════════════════════ -->
+<div id="page-tomato" class="page">
+
+  <!-- HERO -->
+  <section class="tomato-hero">
+    <div style="position:relative;z-index:1;max-width:1040px;width:100%;text-align:center">
+      <button class="tomato-back" onclick="showPage('apps')">&#8592; Apps</button>
+      <div style="text-align:center">
+        <div class="tomato-badge" style="justify-content:center"><span class="tomato-badge-dot"></span>iPhone &amp; iPad &mdash; Coming Soon</div>
+        <span class="tomato-eyebrow" style="text-align:center;display:block">Home Gardening</span>
+        <span class="tomato-title" style="text-align:center;display:block">Tomato<br><em>Journal</em></span>
+        <p class="tomato-tagline" style="text-align:center;max-width:100%">Track your plants, harvests, and results season over season.<br>The app that gets more useful every year you use it.</p>
+        <div class="tomato-hero-actions" style="justify-content:center">
+          <a href="mailto:mistercorbett@gmail.com?subject=Tomato Journal" class="btn btn-tomato">Notify Me at Launch &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE BAND -->
+  <div class="tomato-value-band">
+    <div class="tomato-value-band-inner">
+      <p class="tomato-value-quote">&#8220;The tomato app &mdash; <em>for tomato people</em> &#8221;</p>
+      <p class="tomato-value-sub">For hobbyist tomato gardeners who want to build a personal record they can reference and improve on each season.</p>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="tomato-features">
+    <div class="tomato-features-inner">
+      <p class="tomato-section-label">// What It Does</p>
+      <h2 class="tomato-section-heading">Your tomato season, remembered.</h2>
+      <div class="tomato-features-grid">
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
+          <span class="tomato-feature-icon">🍅</span>
+          <div class="tomato-feature-title">Plant Tracking</div>
+          <p class="tomato-feature-desc">Log every variety by name, type, characteristics, date planted, bed, and region. Arrange plants in walk order. Quick-add from varieties you've grown before.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
+          <span class="tomato-feature-icon">⚖️</span>
+          <div class="tomato-feature-title">Harvest Log</div>
+          <p class="tomato-feature-desc">Record harvests per plant as they happen. Season totals and lifetime yields give you the full picture of what your garden produces.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
+          <span class="tomato-feature-icon">📓</span>
+          <div class="tomato-feature-title">Journal Entries</div>
+          <p class="tomato-feature-desc">Attach notes and photos to any plant. Dictate with speech-to-text. Pest issues, taste impressions, anything worth remembering for next year.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
+          <span class="tomato-feature-icon">📚</span>
+          <div class="tomato-feature-title">Variety Encyclopedia</div>
+          <p class="tomato-feature-desc">A library of every variety you've ever grown — lifetime stats, season history, ratings, and photos, grouped by color, size, or growth habit.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
+          <span class="tomato-feature-icon">📅</span>
+          <div class="tomato-feature-title">Season Comparison</div>
+          <p class="tomato-feature-desc">Year-over-year summaries with highlights, variety ratings, and honest notes on what you'd grow again — and what you wouldn't. Export to CSV anytime.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
+          <span class="tomato-feature-icon">☁️</span>
+          <div class="tomato-feature-title">iCloud Sync</div>
+          <p class="tomato-feature-desc">All your data — plants, harvests, journal entries, and photos — syncs automatically across your iPhone and iPad via iCloud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS: V1 Feature Tabs -->
+  <section class="tomato-tabs-section">
+    <div class="tomato-tabs-inner">
+      <p class="tomato-section-label" style="color:var(--tomato-red)">// Four Tabs</p>
+      <h2 class="tomato-section-heading" style="color:var(--tomato-dark);font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px">Four tabs. One complete season record.</h2>
+      <div class="tomato-tab-list" style="grid-template-columns:repeat(4,1fr)">
+        <div class="tomato-tab active" onclick="switchTab(0)">Garden</div>
+        <div class="tomato-tab" onclick="switchTab(1)">Yields</div>
+        <div class="tomato-tab" onclick="switchTab(2)">Seasons</div>
+        <div class="tomato-tab" onclick="switchTab(3)">Varieties</div>
+      </div>
+      <div class="tomato-tab-panels">
+        <div class="panel active" id="tab-panel-0">
+          <div class="tab-panel-heading">Garden</div>
+          <p class="tab-panel-desc">Your living list of every plant in the ground this season. Add a variety, log when it went in, note the bed, and update its status as the season progresses.</p>
+          <ul class="tab-bullet-list">
+            <li>Add varieties by name, type, characteristics, and region</li>
+            <li>Track planting date, bed location, and plant status</li>
+            <li>Log harvests and journal entries (with photos and speech-to-text) per plant</li>
+            <li>Track seed saving per plant</li>
+            <li>Arrange plants in walk order; quick-add from previously grown varieties</li>
+          </ul>
+        </div>
+        <div class="panel" id="tab-panel-1">
+          <div class="tab-panel-heading">Yields</div>
+          <p class="tab-panel-desc">A clean harvest summary filtered by season. See what you pulled out of the garden, plant by plant and in total — with lifetime numbers in the All Seasons view.</p>
+          <ul class="tab-bullet-list">
+            <li>Season-filtered harvest summary</li>
+            <li>Grouped harvest log by plant and date</li>
+            <li>Lifetime totals across all seasons</li>
+            <li>Compare yields across varieties at a glance</li>
+          </ul>
+        </div>
+        <div class="panel" id="tab-panel-2">
+          <div class="tab-panel-heading">Seasons</div>
+          <p class="tab-panel-desc">The long view. Year-over-year comparisons with highlights, ratings, and the honest record of what worked and what didn't.</p>
+          <ul class="tab-bullet-list">
+            <li>Year-over-year season comparison</li>
+            <li>Season highlights — best tasting, would/wouldn't grow again</li>
+            <li>Variety ratings per season</li>
+            <li>CSV export of your full harvest record</li>
+          </ul>
+        </div>
+        <div class="panel" id="tab-panel-3">
+          <div class="tab-panel-heading">Varieties</div>
+          <p class="tab-panel-desc">A read-only encyclopedia of every variety you've ever grown, built automatically from your data across all seasons. The longer you use the app, the richer this gets.</p>
+          <ul class="tab-bullet-list">
+            <li>Lifetime stats, season history, and ratings per variety</li>
+            <li>Journal entries and photos aggregated across all seasons</li>
+            <li>Group by color, size, growth habit, or plant type</li>
+            <li>Grows more useful every season you track</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tomato-cta-band">
+    <div class="tomato-cta-band-inner">
+      <h2 class="tomato-cta-heading">Coming Soon to the App Store</h2>
+      <p class="tomato-cta-sub">Free for your first full year. Then $3.99/year to keep going. No ads, ever — your garden journal is a personal record, not a product.<br><br>Send an email to get notified at launch.</p>
+      <a href="mailto:mistercorbett@gmail.com?subject=Tomato Journal — Notify Me" class="btn btn-white">Get Notified &#8594;</a>
+    </div>
+  </section>
+
+  <footer class="tomato-footer">
+    <span class="tomato-footer-logo" onclick="showPage('home')">mistercorbett</span>
+    <p class="tomato-footer-copy">&#169; 2026 mistercorbett. All rights reserved.</p>
+  </footer>
+
+</div><!-- /tomato -->
 
 
 <script>
 /* ROUTING */
-const PAGES=['home','apps','classroom','whap','privacy'];
+const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','tomato'];
 const navEl=document.getElementById('main-nav');
 
 function showPage(id){
@@ -632,6 +911,12 @@ function goFullscreen(){
   const el=document.getElementById('slot-section');
   if(el.requestFullscreen)el.requestFullscreen();
   else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen();
+}
+
+/* TOMATO JOURNAL TABS */
+function switchTab(index){
+  document.querySelectorAll('.tomato-tab').forEach((t,i)=>t.classList.toggle('active',i===index));
+  document.querySelectorAll('.tomato-tab-panels .panel').forEach((p,i)=>p.classList.toggle('active',i===index));
 }
 </script>
 </body>
