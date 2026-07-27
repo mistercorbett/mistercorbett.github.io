@@ -309,7 +309,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a onclick="showPage('apps')">Apps</a></li>
     <li><a onclick="showPage('classroom')">Classroom</a></li>
-    <li><a onclick="showPage('privacy')">Privacy Policies</a></li>
+    <li><a onclick="showPage('privacy')">Policies &amp; Terms</a></li>
     <li><a href="https://apps.apple.com/us/developer/brian-james-corbett/id1885243761" target="_blank" class="nav-cta">&#xF8FF; App Store</a></li>
   </ul>
 </nav>
@@ -614,18 +614,34 @@ Free to play. SAQ MODE from $2.99/month.</p>
 <div id="page-privacy" class="page">
   <div class="privacy-page">
     <button class="btn btn-ghost" onclick="showPage('home')" style="margin-bottom:40px">&#8592; Back</button>
-    <h1 class="privacy-heading">Privacy Policies</h1>
-    <span class="privacy-date" style="margin-bottom:32px;display:block">Select an app to view its privacy policy.</span>
-    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+    <h1 class="privacy-heading">Policies &amp; Terms</h1>
+    <span class="privacy-date" style="margin-bottom:32px;display:block">Select a document to view.</span>
+
+    <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Privacy Policies</p>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px;margin-bottom:36px">
       <div onclick="showPage('privacy-whap')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s;position:relative;overflow:hidden" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent-2)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent-2);margin-bottom:6px">iOS App</div>
         <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">AP World History Slots</div>
         <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: April 2026 &nbsp;&#8594;</div>
       </div>
       <div onclick="showPage('privacy-tomato')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
-        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS App</div>
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS &amp; Android App</div>
         <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal</div>
         <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: July 2026 &nbsp;&#8594;</div>
+      </div>
+    </div>
+
+    <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Terms of Use</p>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+      <div onclick="showPage('terms-tomato-ios')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal &mdash; iOS</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Apple Standard EULA &nbsp;&#8594;</div>
+      </div>
+      <div onclick="showPage('terms-tomato-android')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">Android App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal &mdash; Android</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: July 27, 2026 &nbsp;&#8594;</div>
       </div>
     </div>
   </div>
@@ -847,9 +863,77 @@ Free to play. SAQ MODE from $2.99/month.</p>
 </div><!-- /delete-account -->
 
 
+<!-- ══════════════════════════════════════
+     TERMS OF USE — TOMATO JOURNAL (iOS)
+══════════════════════════════════════ -->
+<div id="page-terms-tomato-ios" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Terms of Use</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal &mdash; iOS</div>
+    <div class="privacy-content">
+      <p>Tomato Journal for iOS uses Apple&#8217;s Standard End User License Agreement (EULA).</p>
+      <p>You can read the full terms at:<br>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">apple.com/legal/internet-services/itunes/dev/stdeula</a>
+      </p>
+      <h2>Contact</h2>
+      <p>If you have any questions please contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /terms-tomato-ios -->
+
+
+<!-- ══════════════════════════════════════
+     TERMS OF USE — TOMATO JOURNAL (Android)
+══════════════════════════════════════ -->
+<div id="page-terms-tomato-android" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Terms of Use</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal &mdash; Android</div>
+    <span class="privacy-date">Last updated: July 27, 2026</span>
+    <div class="privacy-content">
+      <p>These Terms of Use (&#8220;Terms&#8221;) govern your use of the Tomato Journal Android application (&#8220;App&#8221;), provided by Corbett Apps (&#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, please do not use the App.</p>
+      <h2>1. License</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App on Android devices you own or control, solely for your personal, non-commercial use, in accordance with these Terms and the Google Play Terms of Service.</p>
+      <p>You may not: copy, modify, or create derivative works of the App; reverse-engineer, decompile, or disassemble the App except as permitted by law; rent, lease, sell, distribute, or sublicense the App; or remove any proprietary notices.</p>
+      <h2>2. Accounts</h2>
+      <p>The App requires you to sign in using Google Sign-In. You are responsible for maintaining the security of your account and for all activity under it. You must provide accurate information and keep it up to date.</p>
+      <h2>3. Subscriptions</h2>
+      <p>Tomato Journal offers a free trial period (365 days from first install) followed by an optional paid annual subscription (&#8220;Tomato Journal Pro&#8221;) for continued ability to add new data. Existing data you&#8217;ve already entered remains accessible and editable regardless of subscription status.</p>
+      <ul>
+        <li>Subscriptions are billed through Google Play and are subject to Google Play&#8217;s billing terms.</li>
+        <li>Subscriptions automatically renew annually unless canceled at least 24 hours before the end of the current period.</li>
+        <li>You can manage or cancel your subscription at any time through your Google Play account settings.</li>
+        <li>Prices are as displayed in the App at the time of purchase and may vary by region.</li>
+        <li>Refunds are handled according to Google Play&#8217;s refund policies, not directly by us.</li>
+      </ul>
+      <h2>4. Your Content</h2>
+      <p>You retain all rights to the data you enter into the App (plants, harvests, photos, journal entries, recipes, etc.) (&#8220;Your Content&#8221;). We do not claim ownership over Your Content. You&#8217;re solely responsible for Your Content and for ensuring you have the right to store any photos or information you add.</p>
+      <p>We store Your Content using Firebase (Google) services to sync and back up your data across your devices. See our <span onclick="showPage('privacy-tomato')" style="color:var(--tomato-red);cursor:pointer;text-decoration:underline">Privacy Policy</span> for details on how your data is handled.</p>
+      <h2>5. Account &amp; Data Deletion</h2>
+      <p>You may delete your account and all associated data at any time via Settings within the App, or by visiting <span onclick="showPage('delete-account')" style="color:var(--tomato-red);cursor:pointer;text-decoration:underline">mistercorbett.com/#delete-account</span>. This action is permanent and cannot be undone.</p>
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>The App is provided &#8220;as is&#8221; and &#8220;as available,&#8221; without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the App will be uninterrupted, error-free, or that any data loss will not occur, though we take reasonable measures to prevent it.</p>
+      <p>Data, statistics, and calculations displayed in the App (including yield totals, weight conversions, and harvest summaries) are provided for general personal record-keeping and informational purposes only. We do not guarantee the accuracy of any figures generated by the App, and you should not rely on them for any purpose beyond your own casual gardening records.</p>
+      <h2>7. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Corbett Apps shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, arising from your use of, or inability to use, the App. In no event shall Corbett Apps&#8217; total liability to you for all damages exceed the greater of (a) the amount you paid us in the twelve (12) months prior to the claim, or (b) fifty dollars ($50 USD).</p>
+      <h2>8. Termination</h2>
+      <p>We may suspend or terminate your access to the App if you violate these Terms. You may stop using the App and delete your account at any time.</p>
+      <h2>9. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. Continued use of the App after changes take effect constitutes acceptance of the updated Terms. Material changes will be reflected by updating the &#8220;Last updated&#8221; date above.</p>
+      <h2>10. Governing Law</h2>
+      <p>These Terms are governed by the laws of the State of California, USA, without regard to conflict-of-law principles.</p>
+      <h2>11. Contact</h2>
+      <p>Questions about these Terms? Contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /terms-tomato-android -->
+
+
 <script>
 /* ROUTING */
-const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','tomato','delete-account'];
+const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','tomato','delete-account','terms-tomato-ios','terms-tomato-android'];
 const navEl=document.getElementById('main-nav');
 
 function showPage(id){
