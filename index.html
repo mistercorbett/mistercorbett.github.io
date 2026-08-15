@@ -235,6 +235,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 .btn-tomato:hover{background:#c4402b;box-shadow:0 4px 36px rgba(217,79,58,0.5)}
 .btn-tomato-ghost{background:transparent;color:rgba(253,246,236,0.65);border:1px solid rgba(253,246,236,0.2)}
 .btn-tomato-ghost:hover{color:var(--tomato-cream);border-color:rgba(253,246,236,0.5)}
+.gplay-hidden{display:none} /* TODO: remove this class when Android is live */
 
 /* Hero badge */
 .tomato-badge{display:inline-flex;align-items:center;gap:8px;font-size:.56rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(253,246,236,0.45);border:1px solid rgba(253,246,236,0.1);border-radius:2px;padding:5px 12px;margin-bottom:20px;font-family:'DM Mono',monospace}
@@ -390,7 +391,7 @@ Free to play. SAQ MODE from $2.99/month.</p>
         </div>
       </div>
       <div class="app-card tomato-app" onclick="showPage('tomato')">
-        <p class="card-platform"><span class="card-dot"></span>iOS App &mdash; iPhone &amp; iPad</p>
+        <p class="card-platform"><span class="card-dot"></span>iOS App &mdash; iPhone, iPad &amp; Android</p>
         <div class="card-name">Tomato Journal</div>
         <div class="card-subject">Home Gardening</div>
         <p class="card-desc">Track your tomato plants, harvests, and results season over season. Log journal entries, track your seed inventory, build a variety encyclopedia from your own data, and export your full season as a spreadsheet. Free for your first full year. Then $3.99/year — no ads, no trackers.</p>
@@ -398,11 +399,13 @@ Free to play. SAQ MODE from $2.99/month.</p>
           <span class="card-tag">Plant Tracking</span>
           <span class="card-tag">Harvest Log</span>
           <span class="card-tag">Variety Encyclopedia</span>
-          <span class="card-tag">iCloud Sync</span>
-          <span class="card-tag">CSV Export</span>
+          <span class="card-tag">Cloud Sync</span>
+          <span class="card-tag">Spreadsheet Export</span>
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
           <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="card-cta" style="color:var(--tomato-red)" onclick="event.stopPropagation()">&#xF8FF; Download on App Store &#8594;</a>
+          <!-- TODO: remove gplay-hidden class and replace # with Play Store URL when Android is live -->
+          <a href="#" target="_blank" class="card-cta gplay-hidden" style="color:var(--tomato-red)" onclick="event.stopPropagation()">&#9654; Google Play &#8594;</a>
           <span class="card-cta" style="color:var(--ink-muted)">Learn More &#8594;</span>
         </div>
       </div>
@@ -746,12 +749,14 @@ Free to play. SAQ MODE from $2.99/month.</p>
     <div style="position:relative;z-index:1;max-width:1040px;width:100%;text-align:center">
       <button class="tomato-back" onclick="showPage('apps')">&#8592; Apps</button>
       <div style="text-align:center">
-        <div class="tomato-badge" style="justify-content:center"><span class="tomato-badge-dot"></span>iPhone &amp; iPad</div>
+        <div class="tomato-badge" style="justify-content:center"><span class="tomato-badge-dot"></span>iPhone, iPad &amp; Android</div>
         <span class="tomato-eyebrow" style="text-align:center;display:block">Home Gardening</span>
         <span class="tomato-title" style="text-align:center;display:block">Tomato<br><em>Journal</em></span>
         <p class="tomato-tagline" style="text-align:center;max-width:100%">Track your plants, harvests, and results season over season.<br>The app that gets more useful every year you use it.</p>
         <div class="tomato-hero-actions" style="justify-content:center">
           <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="btn btn-tomato">&#xF8FF; Download on App Store &#8594;</a>
+          <!-- TODO: remove gplay-hidden class and replace # with Play Store URL when Android is live -->
+          <a href="#" target="_blank" class="btn btn-tomato-ghost gplay-hidden">&#9654; Get it on Google Play &#8594;</a>
         </div>
       </div>
     </div>
@@ -799,7 +804,22 @@ Free to play. SAQ MODE from $2.99/month.</p>
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
           <span class="tomato-feature-icon">📊</span>
           <div class="tomato-feature-title">Spreadsheet Export</div>
-          <p class="tomato-feature-desc">Export your full season as a 5-tab .xlsx file — plants, harvests, journal entries, heaviest tomatoes, and seed inventory. Opens in Numbers and Excel.</p>
+          <p class="tomato-feature-desc">Export your full season as a 5-tab .xlsx file — plants, harvests, journal entries, heaviest tomatoes, and seed inventory. Opens in Excel, Google Sheets, or any compatible spreadsheet app.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
+          <span class="tomato-feature-icon">🍽️</span>
+          <div class="tomato-feature-title">Recipes</div>
+          <p class="tomato-feature-desc">Save and organize your favorite tomato recipes — tag them by variety, category, and source, so your garden data and your kitchen stay connected.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
+          <span class="tomato-feature-icon">📤</span>
+          <div class="tomato-feature-title">Harvest Share</div>
+          <p class="tomato-feature-desc">Turn any day's harvest into a shareable graphic — perfect for showing off a big pick on social media.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
+          <span class="tomato-feature-icon">🎉</span>
+          <div class="tomato-feature-title">Season Wrap</div>
+          <p class="tomato-feature-desc">Wrap up your season with a shareable recap graphic — standout varieties, top harvests, and season highlights, ready to post.</p>
         </div>
       </div>
     </div>
@@ -808,13 +828,14 @@ Free to play. SAQ MODE from $2.99/month.</p>
   <!-- TABS: V1 Feature Tabs -->
   <section class="tomato-tabs-section">
     <div class="tomato-tabs-inner">
-      <p class="tomato-section-label" style="color:var(--tomato-red)">// Four Tabs</p>
-      <h2 class="tomato-section-heading" style="color:var(--tomato-dark);font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px">Four tabs. One complete season record.</h2>
-      <div class="tomato-tab-list" style="grid-template-columns:repeat(4,1fr)">
+      <p class="tomato-section-label" style="color:var(--tomato-red)">// Five Tabs</p>
+      <h2 class="tomato-section-heading" style="color:var(--tomato-dark);font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px">Five tabs. One complete season record.</h2>
+      <div class="tomato-tab-list" style="grid-template-columns:repeat(5,1fr)">
         <div class="tomato-tab active" onclick="switchTab(0)">Garden</div>
         <div class="tomato-tab" onclick="switchTab(1)">Yields</div>
         <div class="tomato-tab" onclick="switchTab(2)">Seasons</div>
         <div class="tomato-tab" onclick="switchTab(3)">Varieties</div>
+        <div class="tomato-tab" onclick="switchTab(4)">More</div>
       </div>
       <div class="tomato-tab-panels">
         <div class="panel active" id="tab-panel-0">
@@ -836,6 +857,7 @@ Free to play. SAQ MODE from $2.99/month.</p>
             <li>Grouped harvest log by plant and date</li>
             <li>Lifetime totals across all seasons</li>
             <li>Heaviest Tomatoes leaderboard — track your biggest individual fruits</li>
+            <li>Share any day's harvest as a shareable graphic</li>
           </ul>
         </div>
         <div class="panel" id="tab-panel-2">
@@ -846,6 +868,7 @@ Free to play. SAQ MODE from $2.99/month.</p>
             <li>Season highlights — best tasting, would/wouldn't grow again</li>
             <li>Variety ratings per season</li>
             <li>Export your full season as a 5-tab .xlsx spreadsheet</li>
+            <li>Create a shareable Season Wrap recap at the end of the season</li>
           </ul>
         </div>
         <div class="panel" id="tab-panel-3">
@@ -859,6 +882,17 @@ Free to play. SAQ MODE from $2.99/month.</p>
             <li>Group by color, size, shape, growth habit, breeder, or type</li>
           </ul>
         </div>
+        <div class="panel" id="tab-panel-4">
+          <div class="tab-panel-heading">More</div>
+          <p class="tab-panel-desc">Everything else you need — settings, subscription, recipes, and support.</p>
+          <ul class="tab-bullet-list">
+            <li>Manage your subscription</li>
+            <li>Browse and manage your recipe collection</li>
+            <li>Create shareable graphics to show off your harvest and season</li>
+            <li>App settings and unit preferences</li>
+            <li>Help &amp; instructions</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -867,7 +901,11 @@ Free to play. SAQ MODE from $2.99/month.</p>
     <div class="tomato-cta-band-inner">
       <h2 class="tomato-cta-heading">Available on the App Store</h2>
       <p class="tomato-cta-sub">Free for your first full year. Then $3.99/year to keep going. No ads. No trackers.</p>
-      <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="btn btn-white">&#xF8FF; Download on App Store &#8594;</a>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="btn btn-white">&#xF8FF; Download on App Store &#8594;</a>
+        <!-- TODO: remove gplay-hidden class and replace # with Play Store URL when Android is live -->
+        <a href="#" target="_blank" class="btn btn-white gplay-hidden">&#9654; Get it on Google Play &#8594;</a>
+      </div>
     </div>
   </section>
 
