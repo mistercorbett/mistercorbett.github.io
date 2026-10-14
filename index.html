@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mistercorbett — Apps for the Classroom</title>
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://mistercorbett.com/">
 <meta name="description" content="Educational apps, garden tools, and classroom resources built by a California teacher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -263,7 +264,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 /* Tabs section */
 .tomato-tabs-section{background:#fff;padding:80px 48px}
 .tomato-tabs-inner{max-width:900px;margin:0 auto}
-.tomato-tab-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,15,10,0.08);border-radius:4px;overflow:hidden;margin-bottom:36px}
+.tomato-tab-list{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(26,15,10,0.08);border-radius:4px;overflow:hidden;margin-bottom:36px}
 .tomato-tab{padding:14px 12px;text-align:center;cursor:pointer;background:var(--paper-2);font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink-muted);transition:background .15s,color .15s;font-family:'DM Mono',monospace;user-select:none}
 .tomato-tab.active{background:#fff;color:var(--tomato-red)}
 .tomato-tab-panels .panel{display:none}
@@ -279,8 +280,11 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 .tomato-cta-band-inner{max-width:560px;margin:0 auto}
 .tomato-cta-heading{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
 .tomato-cta-sub{font-size:.74rem;color:rgba(255,255,255,0.72);line-height:1.9;margin-bottom:28px;font-family:'DM Mono',monospace}
+.btn-vine{background:var(--tomato-green);color:#fff;box-shadow:0 4px 24px rgba(74,124,89,0.35)}
+.btn-vine:hover{background:#3a6349;box-shadow:0 4px 36px rgba(74,124,89,0.5)}
 .btn-white{background:#fff;color:var(--tomato-red)}
 .btn-white:hover{background:var(--tomato-cream)}
+.tomato-cta-band-inner{max-width:720px;margin:0 auto}
 
 /* Tomato footer */
 .tomato-footer{background:var(--tomato-dark);padding:40px 48px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
@@ -309,8 +313,8 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a onclick="showPage('apps')">Apps</a></li>
     <li><a onclick="showPage('classroom')">Classroom</a></li>
-    <li><a onclick="showPage('privacy')">Privacy Policies</a></li>
-    <li><a href="https://apps.apple.com/app/id6760600962" target="_blank" class="nav-cta">&#xF8FF; App Store</a></li>
+    <li><a onclick="showPage('privacy')">Policies &amp; Terms</a></li>
+    <li><a href="https://apps.apple.com/us/developer/brian-james-corbett/id1885243761" target="_blank" class="nav-cta">&#xF8FF; App Store</a></li>
   </ul>
 </nav>
 
@@ -342,7 +346,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <ul class="home-footer-links">
       <li><a onclick="showPage('apps')">Apps</a></li>
       <li><a onclick="showPage('classroom')">Classroom</a></li>
-      <li><a href="https://apps.apple.com/app/id6760600962" target="_blank">App Store</a></li>
+      <li><a href="https://apps.apple.com/us/developer/brian-james-corbett/id1885243761" target="_blank">App Store</a></li>
       <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
     </ul>
     <p class="home-footer-copy">
@@ -364,7 +368,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <button class="btn btn-ghost" onclick="showPage('home')" style="margin-bottom:32px">&#8592; Home</button>
       <p class="subpage-label">Available Now</p>
       <h1 class="subpage-title">Apps</h1>
-      <p class="subpage-desc">iOS apps for AP World History students.</p>
+      <p class="subpage-desc">Apps for the classroom and the garden.</p>
     </div>
   </section>
 
@@ -388,18 +392,22 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
         </div>
       </div>
       <div class="app-card tomato-app" onclick="showPage('tomato')">
-        <p class="card-platform"><span class="card-dot"></span>iOS App &mdash; iPhone &amp; iPad &mdash; Coming Soon</p>
+        <p class="card-platform"><span class="card-dot"></span>iOS App &mdash; iPhone, iPad &amp; Android</p>
         <div class="card-name">Tomato Journal</div>
         <div class="card-subject">Home Gardening</div>
-        <p class="card-desc">Track your tomato plants, harvests, and results season over season. Log journal entries, build a variety encyclopedia from your own data, and compare seasons year over year. Free for your first full year. Then $3.99/year — no ads, ever.</p>
+        <p class="card-desc">Track your tomato plants, harvests, and results season over season. Log journal entries, track your seed inventory, build a variety encyclopedia from your own data, and export your full season as a spreadsheet. Free for your first full year. Then $3.99/year — no ads, no selling your data.</p>
         <div class="card-tags">
           <span class="card-tag">Plant Tracking</span>
           <span class="card-tag">Harvest Log</span>
           <span class="card-tag">Variety Encyclopedia</span>
-          <span class="card-tag">iCloud Sync</span>
-          <span class="card-tag">CSV Export</span>
+          <span class="card-tag">Cloud Sync</span>
+          <span class="card-tag">Spreadsheet Export</span>
         </div>
-        <span class="card-cta">Learn More &#8594;</span>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="card-cta" style="color:var(--tomato-red)" onclick="event.stopPropagation()">Download on the App Store &#xF8FF;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.corbettapps.tomatojournal" target="_blank" class="card-cta" style="color:var(--tomato-red)" onclick="event.stopPropagation()">Download on Google Play &#9654;</a>
+          <span class="card-cta" style="color:var(--ink-muted);cursor:pointer" onclick="showPage('tomato');event.stopPropagation()">Learn More &#8594;</span>
+        </div>
       </div>
     </div>
   </section>
@@ -610,10 +618,12 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 <div id="page-privacy" class="page">
   <div class="privacy-page">
     <button class="btn btn-ghost" onclick="showPage('home')" style="margin-bottom:40px">&#8592; Back</button>
-    <h1 class="privacy-heading">Privacy Policies</h1>
-    <span class="privacy-date" style="margin-bottom:32px;display:block">Select an app to view its privacy policy.</span>
-    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
-      <div onclick="showPage('privacy-whap')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s;position:relative;overflow:hidden" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent-2)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+    <h1 class="privacy-heading">Policies &amp; Terms</h1>
+    <span class="privacy-date" style="margin-bottom:32px;display:block">Select a document to view.</span>
+
+    <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Privacy Policies</p>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px;margin-bottom:36px">
+      <div onclick="showPage('privacy-whap')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent-2)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent-2);margin-bottom:6px">iOS App</div>
         <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">AP World History Slots</div>
         <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: October 2026 &nbsp;&#8594;</div>
@@ -621,7 +631,35 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <div onclick="showPage('privacy-tomato')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS App</div>
         <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal</div>
-        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: May 2026 &nbsp;&#8594;</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: August 2026 &nbsp;&#8594;</div>
+      </div>
+      <div onclick="showPage('privacy-tomato-android')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-green)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-green);margin-bottom:6px">Android App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: August 2026 &nbsp;&#8594;</div>
+      </div>
+    </div>
+
+    <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Terms of Use</p>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px;margin-bottom:36px">
+      <div onclick="showPage('terms-tomato-ios')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-red)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-red);margin-bottom:6px">iOS App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal — Terms of Use</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Apple Standard EULA &nbsp;&#8594;</div>
+      </div>
+      <div onclick="showPage('terms-tomato-android')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-green)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-green);margin-bottom:6px">Android App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal — Terms of Use</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: July 27, 2026 &nbsp;&#8594;</div>
+      </div>
+    </div>
+
+    <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Delete My Account</p>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+      <div onclick="showPage('delete-account')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Tomato Journal</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Delete My Account</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Permanent account &amp; data deletion &nbsp;&#8594;</div>
       </div>
     </div>
   </div>
@@ -655,22 +693,26 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 
 
 <!-- ══════════════════════════════════════
-     PRIVACY — TOMATO JOURNAL
+     PRIVACY — TOMATO JOURNAL (iOS)
 ══════════════════════════════════════ -->
 <div id="page-privacy-tomato" class="page">
   <div class="privacy-page">
-    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Privacy Policies</button>
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
     <h1 class="privacy-heading">Privacy Policy</h1>
-    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal</div>
-    <span class="privacy-date">Last updated: May 2026</span>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal — iOS</div>
+    <span class="privacy-date">Last updated: August 2026</span>
     <div class="privacy-content">
       <p>Tomato Journal (&#8220;the App&#8221;) is a personal garden tracking app for tomato growers. This privacy policy explains how the App handles your information.</p>
-      <h2>Information We Collect</h2>
-      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, and photos &#8212; in your personal iCloud account via Apple&#8217;s CloudKit. This data is yours, stored under your Apple ID, and is never accessed by us.</p>
+      <h2>Your Data</h2>
+      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, photos, and recipes &#8212; in your personal iCloud account via Apple&#8217;s CloudKit. This data is yours, stored under your Apple ID, and is never accessed by us.</p>
+      <h2>Voice Dictation</h2>
+      <p>Journal entries support voice dictation using Apple&#8217;s built-in speech recognition. When you use this feature, audio is processed by Apple according to their privacy policy. We do not receive, store, or have access to any audio or transcription data.</p>
       <h2>Subscription</h2>
       <p>Tomato Journal uses Apple&#8217;s StoreKit for subscription management. We do not collect or store any payment information. All billing is handled entirely by Apple.</p>
       <h2>What We Don&#8217;t Do</h2>
-      <p>We do not collect personal information. We do not serve ads. We do not share your data with third parties.</p>
+      <p>We do not collect personal information. We do not serve ads. We do not sell or share your data with third parties.</p>
+      <h2>Deleting Your Data</h2>
+      <p>You can delete your account and all associated data at any time from within the App: go to More &rarr; Settings &rarr; scroll to the Account section &rarr; tap Delete Account. This action is permanent and cannot be undone.</p>
       <h2>Changes to This Policy</h2>
       <p>We may update this privacy policy from time to time. Any changes will be reflected with an updated date at the top of this page.</p>
       <h2>Contact</h2>
@@ -678,6 +720,143 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     </div>
   </div>
 </div><!-- /privacy-tomato -->
+
+
+<!-- ══════════════════════════════════════
+     PRIVACY — TOMATO JOURNAL (Android)
+══════════════════════════════════════ -->
+<div id="page-privacy-tomato-android" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Privacy Policy</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-green);margin-bottom:6px">Tomato Journal — Android</div>
+    <span class="privacy-date">Last updated: August 2026</span>
+    <div class="privacy-content">
+      <p>Tomato Journal (&#8220;the App&#8221;) is a personal garden tracking app for tomato growers. This privacy policy explains how the App handles your information.</p>
+      <h2>Your Data</h2>
+      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, photos, and recipes &#8212; using Firebase (Google) services. This allows your data to sync across your Android devices. Your data is stored under your Google account and is never sold or shared with third parties.</p>
+      <h2>Account</h2>
+      <p>The App requires you to sign in with Google Sign-In. We use your Google account to associate your garden data with you. We do not access your Google account data beyond what is necessary for authentication.</p>
+      <h2>Voice Dictation</h2>
+      <p>Journal entries support voice dictation using your device&#8217;s built-in speech recognition. When you use this feature, audio is processed by Google according to their privacy policy. We do not receive, store, or have access to any audio or transcription data.</p>
+      <h2>Crash Reporting</h2>
+      <p>The App uses Firebase Crashlytics to collect crash reports. This helps us identify and fix bugs. Crashlytics may collect device information, app state, and crash stack traces. This data is used solely for improving app stability and is governed by Google&#8217;s privacy policy.</p>
+      <h2>Subscription</h2>
+      <p>Tomato Journal uses Google Play billing for subscription management. We do not collect or store any payment information. All billing is handled entirely by Google.</p>
+      <h2>What We Don&#8217;t Do</h2>
+      <p>We do not serve ads. We do not sell your data. We do not share your personal data with third parties beyond the Google services described above.</p>
+      <h2>Deleting Your Data</h2>
+      <p>You can delete your account and all associated data at any time from within the App: go to More &rarr; Settings &rarr; scroll to the Account section &rarr; tap Delete Account. This action is permanent and cannot be undone. You may also request deletion by visiting <a href="https://mistercorbett.com/#delete-account">mistercorbett.com/#delete-account</a>.</p>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Any changes will be reflected with an updated date at the top of this page.</p>
+      <h2>Contact</h2>
+      <p>If you have any questions please contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /privacy-tomato-android -->
+
+
+<!-- ══════════════════════════════════════
+     TERMS — TOMATO JOURNAL (iOS)
+══════════════════════════════════════ -->
+<div id="page-terms-tomato-ios" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Terms of Use</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-red);margin-bottom:6px">Tomato Journal — iOS</div>
+    <span class="privacy-date" style="margin-bottom:24px;display:block">Apple Standard EULA</span>
+    <div class="privacy-content">
+      <p>Tomato Journal for iOS is licensed to you under Apple&#8217;s standard End User License Agreement (EULA).</p>
+      <p>You can review the Apple EULA at: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+      <h2>Contact</h2>
+      <p>Questions? Contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /terms-tomato-ios -->
+
+
+<!-- ══════════════════════════════════════
+     TERMS — TOMATO JOURNAL (Android)
+══════════════════════════════════════ -->
+<div id="page-terms-tomato-android" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Terms of Use</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-green);margin-bottom:6px">Tomato Journal — Android</div>
+    <span class="privacy-date">Last updated: July 27, 2026</span>
+    <div class="privacy-content">
+      <p>These Terms of Use (&#8220;Terms&#8221;) govern your use of the Tomato Journal Android application (&#8220;App&#8221;), provided by Corbett Apps (&#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, please do not use the App.</p>
+      <h2>1. License</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App on Android devices you own or control, solely for your personal, non-commercial use, in accordance with these Terms and the Google Play Terms of Service.</p>
+      <p>You may not: copy, modify, or create derivative works of the App; reverse-engineer, decompile, or disassemble the App except as permitted by law; rent, lease, sell, distribute, or sublicense the App; or remove any proprietary notices.</p>
+      <h2>2. Accounts</h2>
+      <p>The App requires you to sign in using Google Sign-In. You are responsible for maintaining the security of your account and for all activity under it. You must provide accurate information and keep it up to date.</p>
+      <h2>3. Subscriptions</h2>
+      <p>Tomato Journal offers a free trial period (365 days from first install) followed by an optional paid annual subscription (&#8220;Tomato Journal Pro&#8221;) for continued ability to add new data. Existing data you&#8217;ve already entered remains accessible and editable regardless of subscription status.</p>
+      <ul>
+        <li>Subscriptions are billed through Google Play and are subject to Google Play&#8217;s billing terms.</li>
+        <li>Subscriptions automatically renew annually unless canceled at least 24 hours before the end of the current period.</li>
+        <li>You can manage or cancel your subscription at any time through your Google Play account settings.</li>
+        <li>Prices are as displayed in the App at the time of purchase and may vary by region.</li>
+        <li>Refunds are handled according to Google Play&#8217;s refund policies, not directly by us.</li>
+      </ul>
+      <h2>4. Your Content</h2>
+      <p>You retain all rights to the data you enter into the App (plants, harvests, photos, journal entries, recipes, etc.) (&#8220;Your Content&#8221;). We do not claim ownership over Your Content. You&#8217;re solely responsible for Your Content and for ensuring you have the right to store any photos or information you add.</p>
+      <p>We store Your Content using Firebase (Google) services to sync and back up your data across your devices. See our Privacy Policy for details on how your data is handled.</p>
+      <h2>5. Account &amp; Data Deletion</h2>
+      <p>You may delete your account and all associated data at any time via Settings within the App, or by visiting <a href="https://mistercorbett.com/#delete-account">mistercorbett.com/#delete-account</a>. This action is permanent and cannot be undone.</p>
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>The App is provided &#8220;as is&#8221; and &#8220;as available,&#8221; without warranties of any kind, whether express or implied. We do not warrant that the App will be uninterrupted, error-free, or that any data loss will not occur, though we take reasonable measures to prevent it.</p>
+      <p>Data, statistics, and calculations displayed in the App are provided for general personal record-keeping and informational purposes only. We do not guarantee the accuracy of any figures generated by the App.</p>
+      <h2>7. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Corbett Apps shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, arising from your use of, or inability to use, the App. In no event shall Corbett Apps&#8217; total liability to you for all damages exceed the greater of (a) the amount you paid us in the twelve (12) months prior to the claim, or (b) fifty dollars ($50 USD).</p>
+      <h2>8. Termination</h2>
+      <p>We may suspend or terminate your access to the App if you violate these Terms. You may stop using the App and delete your account at any time.</p>
+      <h2>9. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. Continued use of the App after changes take effect constitutes acceptance of the updated Terms. Material changes will be reflected by updating the &#8220;Last updated&#8221; date above.</p>
+      <h2>10. Governing Law</h2>
+      <p>These Terms are governed by the laws of the State of California, USA, without regard to conflict-of-law principles.</p>
+      <h2>11. Contact</h2>
+      <p>Questions about these Terms? Contact us at mistercorbett@gmail.com.</p>
+    </div>
+  </div>
+</div><!-- /terms-tomato-android -->
+
+
+<!-- ══════════════════════════════════════
+     DELETE ACCOUNT
+══════════════════════════════════════ -->
+<div id="page-delete-account" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Delete My Account</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--accent);margin-bottom:6px">Tomato Journal</div>
+    <span class="privacy-date" style="margin-bottom:24px;display:block">Permanent account &amp; data deletion</span>
+    <div class="privacy-content">
+      <p>You can delete your account and all associated data directly from within the Tomato Journal app.</p>
+      <h2>How to Delete Your Account</h2>
+      <ol style="padding-left:22px">
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Open the <strong>Tomato Journal</strong> app.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap the <strong>More</strong> tab.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap <strong>Settings</strong>.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Scroll to the <strong>Account</strong> section.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap <strong>Delete Account</strong>.</li>
+      </ol>
+      <h2>What Gets Deleted</h2>
+      <p>Deleting your account permanently removes all of your data, including:</p>
+      <ul>
+        <li>All plants and plant records</li>
+        <li>All harvest entries</li>
+        <li>All photos</li>
+        <li>All journal entries</li>
+        <li>All recipes</li>
+      </ul>
+      <p><strong>This action is permanent and cannot be undone.</strong></p>
+      <h2>Questions</h2>
+      <p>If you need help or are unable to access the app, contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /delete-account -->
 
 
 <!-- ══════════════════════════════════════
@@ -690,12 +869,13 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <div style="position:relative;z-index:1;max-width:1040px;width:100%;text-align:center">
       <button class="tomato-back" onclick="showPage('apps')">&#8592; Apps</button>
       <div style="text-align:center">
-        <div class="tomato-badge" style="justify-content:center"><span class="tomato-badge-dot"></span>iPhone &amp; iPad &mdash; Coming Soon</div>
+        <div class="tomato-badge" style="justify-content:center"><span class="tomato-badge-dot"></span>iPhone &amp; iPad &amp; Android</div>
         <span class="tomato-eyebrow" style="text-align:center;display:block">Home Gardening</span>
         <span class="tomato-title" style="text-align:center;display:block">Tomato<br><em>Journal</em></span>
         <p class="tomato-tagline" style="text-align:center;max-width:100%">Track your plants, harvests, and results season over season.<br>The app that gets more useful every year you use it.</p>
         <div class="tomato-hero-actions" style="justify-content:center">
-          <a href="mailto:mistercorbett@gmail.com?subject=Tomato Journal" class="btn btn-tomato">Notify Me at Launch &#8594;</a>
+          <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="btn btn-tomato">&#xF8FF; Download on App Store &#8594;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.corbettapps.tomatojournal" target="_blank" class="btn btn-vine">&#9654; Get it on Google Play &#8594;</a>
         </div>
       </div>
     </div>
@@ -718,32 +898,47 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
           <span class="tomato-feature-icon">🍅</span>
           <div class="tomato-feature-title">Plant Tracking</div>
-          <p class="tomato-feature-desc">Log every variety by name, type, characteristics, date planted, bed, and region. Arrange plants in walk order. Quick-add from varieties you've grown before.</p>
+          <p class="tomato-feature-desc">Log every variety by name, shape, breeder, series, date planted, bed, and region. Arrange plants in walk order. Quick-add from varieties you've grown before.</p>
         </div>
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
           <span class="tomato-feature-icon">⚖️</span>
           <div class="tomato-feature-title">Harvest Log</div>
-          <p class="tomato-feature-desc">Record harvests per plant as they happen. Season totals and lifetime yields give you the full picture of what your garden produces.</p>
+          <p class="tomato-feature-desc">Record harvests per plant as they happen. Season totals and lifetime yields give you the full picture. The Heaviest Tomatoes leaderboard tracks your best individual fruits.</p>
         </div>
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
           <span class="tomato-feature-icon">📓</span>
           <div class="tomato-feature-title">Journal Entries</div>
-          <p class="tomato-feature-desc">Attach notes and photos to any plant. Dictate with speech-to-text. Pest issues, taste impressions, anything worth remembering for next year.</p>
+          <p class="tomato-feature-desc">Attach notes and photos to any plant. Dictate with speech-to-text. Batch-log the same entry across multiple plants at once. Pest issues, taste impressions — anything worth remembering.</p>
         </div>
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
           <span class="tomato-feature-icon">📚</span>
           <div class="tomato-feature-title">Variety Encyclopedia</div>
-          <p class="tomato-feature-desc">A library of every variety you've ever grown — lifetime stats, season history, ratings, and photos, grouped by color, size, or growth habit.</p>
-        </div>
-        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
-          <span class="tomato-feature-icon">📅</span>
-          <div class="tomato-feature-title">Season Comparison</div>
-          <p class="tomato-feature-desc">Year-over-year summaries with highlights, variety ratings, and honest notes on what you'd grow again — and what you wouldn't. Export to CSV anytime.</p>
+          <p class="tomato-feature-desc">A library of every variety you've ever grown — lifetime stats, breeder info, seed inventory, photos, grouped by color, size, or growth habit. Gets richer every season.</p>
         </div>
         <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
-          <span class="tomato-feature-icon">☁️</span>
-          <div class="tomato-feature-title">iCloud Sync</div>
-          <p class="tomato-feature-desc">All your data — plants, harvests, journal entries, and photos — syncs automatically across your iPhone and iPad via iCloud.</p>
+          <span class="tomato-feature-icon">🌱</span>
+          <div class="tomato-feature-title">Seed Inventory</div>
+          <p class="tomato-feature-desc">Track seed lots per variety — saved, purchased, traded, or gifted. Know what you have on hand before next season starts.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
+          <span class="tomato-feature-icon">📊</span>
+          <div class="tomato-feature-title">Spreadsheet Export</div>
+          <p class="tomato-feature-desc">Export your full season as a 5-tab .xlsx file — compatible with Excel, Google Sheets, and any spreadsheet app. Your data, yours to keep.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-red)">
+          <span class="tomato-feature-icon">🍽️</span>
+          <div class="tomato-feature-title">Recipes</div>
+          <p class="tomato-feature-desc">Save and organize your favorite tomato recipes right in the app. Build a personal collection of what to do with your harvest.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-gold)">
+          <span class="tomato-feature-icon">📤</span>
+          <div class="tomato-feature-title">Harvest Share</div>
+          <p class="tomato-feature-desc">Generate a shareable graphic from any harvest entry. Show off what came in from the garden.</p>
+        </div>
+        <div class="tomato-feature-card" style="--card-f-accent:var(--tomato-green)">
+          <span class="tomato-feature-icon">🎉</span>
+          <div class="tomato-feature-title">Season Wrap</div>
+          <p class="tomato-feature-desc">At the end of the season, generate a shareable recap graphic — your totals, top varieties, and season highlights in one image.</p>
         </div>
       </div>
     </div>
@@ -752,13 +947,14 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
   <!-- TABS: V1 Feature Tabs -->
   <section class="tomato-tabs-section">
     <div class="tomato-tabs-inner">
-      <p class="tomato-section-label" style="color:var(--tomato-red)">// Four Tabs</p>
-      <h2 class="tomato-section-heading" style="color:var(--tomato-dark);font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px">Four tabs. One complete season record.</h2>
-      <div class="tomato-tab-list" style="grid-template-columns:repeat(4,1fr)">
+      <p class="tomato-section-label" style="color:var(--tomato-red)">// Five Tabs</p>
+      <h2 class="tomato-section-heading" style="color:var(--tomato-dark);font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px">Five tabs. One complete season record.</h2>
+      <div class="tomato-tab-list">
         <div class="tomato-tab active" onclick="switchTab(0)">Garden</div>
         <div class="tomato-tab" onclick="switchTab(1)">Yields</div>
         <div class="tomato-tab" onclick="switchTab(2)">Seasons</div>
         <div class="tomato-tab" onclick="switchTab(3)">Varieties</div>
+        <div class="tomato-tab" onclick="switchTab(4)">More</div>
       </div>
       <div class="tomato-tab-panels">
         <div class="panel active" id="tab-panel-0">
@@ -779,7 +975,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
             <li>Season-filtered harvest summary</li>
             <li>Grouped harvest log by plant and date</li>
             <li>Lifetime totals across all seasons</li>
-            <li>Compare yields across varieties at a glance</li>
+            <li>Heaviest Tomatoes leaderboard — your best individual fruits</li>
           </ul>
         </div>
         <div class="panel" id="tab-panel-2">
@@ -789,7 +985,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
             <li>Year-over-year season comparison</li>
             <li>Season highlights — best tasting, would/wouldn't grow again</li>
             <li>Variety ratings per season</li>
-            <li>CSV export of your full harvest record</li>
+            <li>Export your full season as a spreadsheet (.xlsx)</li>
           </ul>
         </div>
         <div class="panel" id="tab-panel-3">
@@ -798,8 +994,19 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
           <ul class="tab-bullet-list">
             <li>Lifetime stats, season history, and ratings per variety</li>
             <li>Journal entries and photos aggregated across all seasons</li>
+            <li>Breeder info and seed inventory per variety</li>
             <li>Group by color, size, growth habit, or plant type</li>
-            <li>Grows more useful every season you track</li>
+          </ul>
+        </div>
+        <div class="panel" id="tab-panel-4">
+          <div class="tab-panel-heading">More</div>
+          <p class="tab-panel-desc">Everything else you need — settings, subscription, recipes, and support.</p>
+          <ul class="tab-bullet-list">
+            <li>Manage subscription</li>
+            <li>Browse and manage your recipe collection</li>
+            <li>Create shareable graphics for harvests and season wrap</li>
+            <li>App settings and unit preferences</li>
+            <li>Help &amp; instructions</li>
           </ul>
         </div>
       </div>
@@ -808,9 +1015,12 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 
   <section class="tomato-cta-band">
     <div class="tomato-cta-band-inner">
-      <h2 class="tomato-cta-heading">Coming Soon to the App Store</h2>
-      <p class="tomato-cta-sub">Free for your first full year. Then $3.99/year to keep going. No ads, ever — your garden journal is a personal record, not a product.<br><br>Send an email to get notified at launch.</p>
-      <a href="mailto:mistercorbett@gmail.com?subject=Tomato Journal — Notify Me" class="btn btn-white">Get Notified &#8594;</a>
+      <h2 class="tomato-cta-heading">Available on iOS &amp; Android</h2>
+      <p class="tomato-cta-sub">Free for your first full year. Then $3.99/year to keep going. No ads. No selling your data.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a href="https://apps.apple.com/us/app/tomato-journal/id6772736632" target="_blank" class="btn btn-white">&#xF8FF; Download on App Store &#8594;</a>
+        <a href="https://play.google.com/store/apps/details?id=com.corbettapps.tomatojournal" target="_blank" class="btn btn-white">&#9654; Get it on Google Play &#8594;</a>
+      </div>
     </div>
   </section>
 
@@ -824,7 +1034,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 
 <script>
 /* ROUTING */
-const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','tomato'];
+const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','privacy-tomato-android','tomato','delete-account','terms-tomato-ios','terms-tomato-android'];
 const navEl=document.getElementById('main-nav');
 
 function showPage(id){
