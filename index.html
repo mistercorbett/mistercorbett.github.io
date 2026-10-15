@@ -656,9 +656,14 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 
     <p style="font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Delete My Account</p>
     <div style="display:flex;flex-direction:column;gap:16px;max-width:520px">
-      <div onclick="showPage('delete-account')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
-        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Tomato Journal</div>
-        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Delete My Account</div>
+      <div onclick="showPage('delete-account-ios')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--accent)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:6px">iPhone &amp; iPad App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Delete My Account — iOS</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Permanent account &amp; data deletion &nbsp;&#8594;</div>
+      </div>
+      <div onclick="showPage('delete-account-android')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-green)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-green);margin-bottom:6px">Android App</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Delete My Account — Android</div>
         <div style="font-size:.7rem;color:var(--ink-muted)">Permanent account &amp; data deletion &nbsp;&#8594;</div>
       </div>
     </div>
@@ -746,7 +751,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <h2>What We Don&#8217;t Do</h2>
       <p>We do not serve ads. We do not sell your data. We do not share your personal data with third parties beyond the Google services described above.</p>
       <h2>Deleting Your Data</h2>
-      <p>You can delete your account and all associated data at any time from within the App: go to More &rarr; Settings &rarr; scroll to the Account section &rarr; tap Delete Account. This action is permanent and cannot be undone. You may also request deletion by visiting <a href="https://mistercorbett.com/#delete-account">mistercorbett.com/#delete-account</a>.</p>
+      <p>You can delete your account and all associated data at any time from within the App: go to More &rarr; Settings &rarr; scroll to the Account section &rarr; tap Delete Account. This action is permanent and cannot be undone. You may also request deletion by visiting <a href="https://mistercorbett.com/#delete-account-android">mistercorbett.com/#delete-account-android</a>.</p>
       <h2>Changes to This Policy</h2>
       <p>We may update this privacy policy from time to time. Any changes will be reflected with an updated date at the top of this page.</p>
       <h2>Contact</h2>
@@ -804,7 +809,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <p>You retain all rights to the data you enter into the App (plants, harvests, photos, journal entries, recipes, etc.) (&#8220;Your Content&#8221;). We do not claim ownership over Your Content. You&#8217;re solely responsible for Your Content and for ensuring you have the right to store any photos or information you add.</p>
       <p>We store Your Content using Firebase (Google) services to sync and back up your data across your devices. See our Privacy Policy for details on how your data is handled.</p>
       <h2>5. Account &amp; Data Deletion</h2>
-      <p>You may delete your account and all associated data at any time via Settings within the App, or by visiting <a href="https://mistercorbett.com/#delete-account">mistercorbett.com/#delete-account</a>. This action is permanent and cannot be undone.</p>
+      <p>You may delete your account and all associated data at any time via Settings within the App, or by visiting <a href="https://mistercorbett.com/#delete-account-android">mistercorbett.com/#delete-account-android</a>. This action is permanent and cannot be undone.</p>
       <h2>6. Disclaimer of Warranties</h2>
       <p>The App is provided &#8220;as is&#8221; and &#8220;as available,&#8221; without warranties of any kind, whether express or implied. We do not warrant that the App will be uninterrupted, error-free, or that any data loss will not occur, though we take reasonable measures to prevent it.</p>
       <p>Data, statistics, and calculations displayed in the App are provided for general personal record-keeping and informational purposes only. We do not guarantee the accuracy of any figures generated by the App.</p>
@@ -826,7 +831,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 <!-- ══════════════════════════════════════
      DELETE ACCOUNT
 ══════════════════════════════════════ -->
-<div id="page-delete-account" class="page">
+<div id="page-delete-account-android" class="page">
   <div class="privacy-page">
     <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
     <h1 class="privacy-heading">Delete My Account</h1>
@@ -860,7 +865,43 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <p>If you need help or are unable to access the app, contact us at: mistercorbett@gmail.com</p>
     </div>
   </div>
-</div><!-- /delete-account -->
+</div><!-- /delete-account-android -->
+
+
+<!-- ══════════════════════════════════════
+     DELETE ACCOUNT — iOS
+══════════════════════════════════════ -->
+<div id="page-delete-account-ios" class="page">
+  <div class="privacy-page">
+    <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
+    <h1 class="privacy-heading">Delete My Account</h1>
+    <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--accent);margin-bottom:6px">Tomato Journal — iPhone &amp; iPad</div>
+    <span class="privacy-date" style="margin-bottom:24px;display:block">Permanent account &amp; data deletion</span>
+    <div class="privacy-content">
+      <p>You can delete your account and all associated data directly from within the Tomato Journal app.</p>
+      <h2>How to Delete Your Account</h2>
+      <ol style="padding-left:22px">
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Open the <strong>Tomato Journal</strong> app.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap the <strong>More</strong> tab.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap <strong>Settings</strong>.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Scroll to the <strong>Account</strong> section.</li>
+        <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap <strong>Delete Account</strong>.</li>
+      </ol>
+      <h2>What Gets Deleted</h2>
+      <p>Deleting your account permanently removes all of your data, including:</p>
+      <ul>
+        <li>All plants and plant records</li>
+        <li>All harvest entries</li>
+        <li>All photos</li>
+        <li>All journal entries</li>
+        <li>All recipes</li>
+      </ul>
+      <p><strong>This action is permanent and cannot be undone.</strong></p>
+      <h2>Questions</h2>
+      <p>If you need help or are unable to access the app, contact us at: mistercorbett@gmail.com</p>
+    </div>
+  </div>
+</div><!-- /delete-account-ios -->
 
 
 <!-- ══════════════════════════════════════
@@ -1038,7 +1079,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
 
 <script>
 /* ROUTING */
-const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','privacy-tomato-android','tomato','delete-account','terms-tomato-ios','terms-tomato-android'];
+const PAGES=['home','apps','classroom','whap','privacy','privacy-whap','privacy-tomato','privacy-tomato-android','tomato','delete-account-ios','delete-account-android','terms-tomato-ios','terms-tomato-android'];
 const navEl=document.getElementById('main-nav');
 
 function showPage(id){
