@@ -636,7 +636,7 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
       <div onclick="showPage('privacy-tomato-android')" style="cursor:pointer;border:1px solid var(--border);border-radius:4px;padding:24px 28px;background:#fff;transition:box-shadow .2s,border-color .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.07)';this.style.borderColor='var(--tomato-green)'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="font-size:.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--tomato-green);margin-bottom:6px">Android App</div>
         <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:4px">Tomato Journal</div>
-        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: August 2026 &nbsp;&#8594;</div>
+        <div style="font-size:.7rem;color:var(--ink-muted)">Last updated: November 2026 &nbsp;&#8594;</div>
       </div>
     </div>
 
@@ -735,23 +735,29 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <button class="btn btn-ghost" onclick="showPage('privacy')" style="margin-bottom:40px">&#8592; Policies &amp; Terms</button>
     <h1 class="privacy-heading">Privacy Policy</h1>
     <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--tomato-green);margin-bottom:6px">Tomato Journal — Android</div>
-    <span class="privacy-date">Last updated: August 2026</span>
+    <span class="privacy-date">Last updated: November 2026</span>
     <div class="privacy-content">
-      <p>Tomato Journal (&#8220;the App&#8221;) is a personal garden tracking app for tomato growers. This privacy policy explains how the App handles your information.</p>
+      <p>Tomato Journal (&#8220;the App&#8221;) is a personal garden tracking app for tomato growers. This privacy policy explains how the Android version of the App handles your information.</p>
       <h2>Your Data</h2>
-      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, photos, and recipes &#8212; using Firebase (Google) services. This allows your data to sync across your Android devices. Your data is stored under your Google account and is never sold or shared with third parties.</p>
+      <p>Tomato Journal stores your garden data &#8212; plants, harvests, journal entries, photos, recipes, and related notes and settings &#8212; using Google&#8217;s Firebase services (Firestore and Cloud Storage), on servers in the United States. This lets your data sync across your Android devices. Your data is linked to your account and is never sold, and we don&#8217;t share it with third parties.</p>
       <h2>Account</h2>
-      <p>The App requires you to sign in with Google Sign-In. We use your Google account to associate your garden data with you. We do not access your Google account data beyond what is necessary for authentication.</p>
+      <p>The App requires you to sign in with Google. Firebase Authentication receives your Google account&#8217;s email address and name and creates an internal account ID, which is used to keep your data separate from everyone else&#8217;s. We don&#8217;t access your Google account data beyond what is needed to sign you in.</p>
+      <h2>Automatic Sign-In Restore</h2>
+      <p>When you sign in, the App creates a restore key so that, if you move to a new phone or restore your phone from a backup, the App can sign you back in automatically. The private part of the key is kept by Google Play services on your device and, if your phone has a screen lock, in your end-to-end encrypted Google backup. Our server stores only the matching public key, an ID for the key, your internal account ID, and the times it was created and last used. We keep at most five keys per account; the oldest is replaced automatically. Signing out removes the key from that device. All your keys are deleted from our server when you delete your account.</p>
+      <h2>App Integrity Checks</h2>
+      <p>To protect our server from misuse, the App asks Google Play (Play Integrity, through Firebase App Check) to confirm that requests come from a genuine copy of the App. Google processes this check; we receive only a pass/fail result, and we don&#8217;t store it.</p>
       <h2>Voice Dictation</h2>
-      <p>Journal entries support voice dictation using your device&#8217;s built-in speech recognition. When you use this feature, audio is processed by Google according to their privacy policy. We do not receive, store, or have access to any audio or transcription data.</p>
+      <p>Journal entries support voice dictation using your device&#8217;s built-in speech recognition. Audio is processed by Google according to its privacy policy. We do not receive, store, or have access to any audio; only the text you choose to keep is saved.</p>
       <h2>Crash Reporting</h2>
-      <p>The App uses Firebase Crashlytics to collect crash reports. This helps us identify and fix bugs. Crashlytics may collect device information, app state, and crash stack traces. This data is used solely for improving app stability and is governed by Google&#8217;s privacy policy.</p>
+      <p>The App uses Firebase Crashlytics to collect crash and error reports so we can find and fix bugs. A report may include your device model, Android version, the App&#8217;s version, an installation identifier, and technical details about the error, which in some error situations may include your internal account ID (a random string, not your name or email). We never send your email, name, or garden content to Crashlytics. Crash reports are kept for about 90 days and are used only to improve stability.</p>
+      <h2>Server Logs</h2>
+      <p>Our server records brief technical logs (for example, that a restore key was created) that identify your account only by the first six characters of its internal ID. These logs are deleted automatically after 30 days.</p>
       <h2>Subscription</h2>
-      <p>Tomato Journal uses Google Play billing for subscription management. We do not collect or store any payment information. All billing is handled entirely by Google.</p>
+      <p>Tomato Journal uses Google Play Billing for subscriptions. We do not collect or store any payment information; billing is handled entirely by Google.</p>
       <h2>What We Don&#8217;t Do</h2>
-      <p>We do not serve ads. We do not sell your data. We do not share your personal data with third parties beyond the Google services described above.</p>
+      <p>We do not serve ads. We do not sell your data. We do not share your personal data with third parties beyond the Google services described above, which process it on our behalf.</p>
       <h2>Deleting Your Data</h2>
-      <p>You can delete your account and all associated data at any time from within the App: go to More &rarr; Settings &rarr; scroll to the Account section &rarr; tap Delete Account. This action is permanent and cannot be undone. You may also request deletion by visiting <a href="https://mistercorbett.com/#delete-account-android">mistercorbett.com/#delete-account-android</a>.</p>
+      <p>You can delete your account and all associated data at any time from within the App: More &rarr; Settings &rarr; Account section &rarr; Delete Account. You can also request deletion without the App &#8212; see <a href="https://mistercorbett.com/#delete-account-android">mistercorbett.com/#delete-account-android</a>, which also explains what is deleted and the short periods for which backup copies remain.</p>
       <h2>Changes to This Policy</h2>
       <p>We may update this privacy policy from time to time. Any changes will be reflected with an updated date at the top of this page.</p>
       <h2>Contact</h2>
@@ -838,8 +844,8 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
     <div style="font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--accent);margin-bottom:6px">Tomato Journal</div>
     <span class="privacy-date" style="margin-bottom:24px;display:block">Permanent account &amp; data deletion</span>
     <div class="privacy-content">
-      <p>You can delete your account and all associated data directly from within the Tomato Journal app.</p>
-      <h2>How to Delete Your Account</h2>
+      <p>You can delete your Tomato Journal account and all associated data from within the app, or by asking us by email if you can&#8217;t use the app.</p>
+      <h2>Option 1 &#8212; In the App</h2>
       <ol style="padding-left:22px">
         <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Open the <strong>Tomato Journal</strong> app.</li>
         <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap the <strong>More</strong> tab.</li>
@@ -848,21 +854,33 @@ nav.dark .nav-cta{background:var(--neon-cyan);color:#000}
         <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">Tap <strong>Delete Account</strong>.</li>
         <li style="font-size:.78rem;line-height:2.1;color:var(--ink-soft);margin-bottom:10px">When asked, confirm with your Google account. Nothing is deleted until you confirm.</li>
       </ol>
+      <p><strong>Tip:</strong> if you&#8217;re signed in to Tomato Journal on another device, sign out there first, so it can&#8217;t re-save anything after your account is deleted.</p>
+      <h2>Option 2 &#8212; By Email (no app needed)</h2>
+      <p>Email <a href="mailto:mistercorbett@gmail.com?subject=Delete%20my%20Tomato%20Journal%20account">mistercorbett@gmail.com</a> from the Google account you use with Tomato Journal, with the subject &#8220;Delete my Tomato Journal account&#8221;. We may reply to confirm the request comes from the account owner. We will delete your account and data within 30 days and email you when it&#8217;s done.</p>
       <h2>What Gets Deleted</h2>
-      <p>Deleting your account permanently removes all of your data, including:</p>
       <ul>
         <li>All plants and plant records</li>
         <li>All harvest entries</li>
-        <li>All photos</li>
         <li>All journal entries</li>
+        <li>All photos</li>
         <li>All recipes</li>
+        <li>Seed lots, ratings, season highlights and season photos, regions, and your settings</li>
+        <li>Your automatic sign-in restore keys</li>
         <li>Your Tomato Journal account itself</li>
       </ul>
       <p><strong>This action is permanent and cannot be undone.</strong></p>
+      <h2>What Is Kept, and for How Long</h2>
+      <ul>
+        <li><strong>Backup copies:</strong> our database and photo storage keep recovery copies for 7 days, after which deleted data is gone permanently.</li>
+        <li><strong>Sign-in records:</strong> Google&#8217;s Firebase Authentication may keep account information in its backup systems for up to 180 days.</li>
+        <li><strong>Crash reports:</strong> technical crash reports (no garden content, name or email) are kept by Firebase Crashlytics for about 90 days.</li>
+        <li><strong>Server logs:</strong> brief technical logs containing only a short fragment of your account ID are deleted after 30 days.</li>
+        <li><strong>Purchase records:</strong> Google Play keeps its own records of subscription purchases under Google&#8217;s policies.</li>
+      </ul>
       <h2>Subscriptions</h2>
-      <p>Deleting your account doesn't cancel a Google Play subscription. To cancel, open the Google Play Store, tap your profile icon, then go to Payments &amp; subscriptions → Subscriptions.</p>
+      <p>Deleting your account doesn&#8217;t cancel a Google Play subscription. To cancel, open the Google Play Store, tap your profile icon, then go to Payments &amp; subscriptions &rarr; Subscriptions.</p>
       <h2>Questions</h2>
-      <p>If you need help or are unable to access the app, contact us at: mistercorbett@gmail.com</p>
+      <p>If you need help, contact us at: mistercorbett@gmail.com</p>
     </div>
   </div>
 </div><!-- /delete-account-android -->
